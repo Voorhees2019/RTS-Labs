@@ -1,0 +1,4 @@
+An expected value = 0.6195302520672672
+The variance = 1.0218777157440488
+Time of calculating the expected value: 0.0005513000000001433 seconds
+Time of calculating the variance: 0.0010142000000001872 seconds

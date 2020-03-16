@@ -1,0 +1,2 @@
+Time of calculating Rxx: 0.7340400000000002 seconds
+Time of calculating Rxy: 0.6747226 seconds
