@@ -1,0 +1,66 @@
+<ItemLabel@Label>:
+    font_size: '20sp'
+    halign: 'left'
+    valign: 'middle'
+    text_size: self.size
+
+
+<Container>:
+    rows: 4
+    text_input: text_input
+    first_number: first_number
+    second_number: second_number
+    factorization_state: factorization_state
+
+    BoxLayout:
+        size_hint: 1, 0.3
+        padding: [20, 0, 0, 0]
+        ItemLabel:
+            text: 'Input the number:'
+
+    AnchorLayout:
+        size_hint: 1, 0.2
+        TextInput:
+            id: text_input
+            font_size: '25sp'
+            multiline: False
+            input_type: 'number'
+            input_filter: 'int'
+
+    BoxLayout:
+        size_hint: 0.9, 0.3
+        padding: [30, 20, 30, 0]
+        Button:
+            text: 'factorize'
+            font_size: '25sp'
+
+            on_release:
+                root.calculate()
+
+    GridLayout:
+        rows: 3
+
+        BoxLayout:
+            Label:
+                id: factorization_state
+                text: 'operation state'
+                font_size: '20sp'
+        BoxLayout:
+            padding: [10, 0, 0, 0]
+            ItemLabel:
+                text: 'The first multiplier: '
+            Label:
+                id: first_number
+                font_size: '20sp'
+                text: ''
+                size_hint: 0.5, 1
+
+        BoxLayout:
+            padding: [10, 0, 0, 0]
+            ItemLabel:
+                text: 'The second multiplier: '
+            Label:
+                id: second_number
+                font_size: '20sp'
+                text: ''
+                size_hint: 0.5, 1
