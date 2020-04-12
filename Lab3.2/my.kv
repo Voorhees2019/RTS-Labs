@@ -1,0 +1,149 @@
+<ItemLabel@Label>:
+	font_size: '20sp'
+	halign: 'left'
+	valign: 'middle'
+	text_size: self.size
+
+<Container>:
+
+	do_default_tab: False
+    text_input: text_input
+    first_number: first_number
+    second_number: second_number
+    factorization_state: factorization_state
+	learning_rate: learning_rate
+	deadline: deadline
+	iterations_number: iterations_number
+	w1: w1
+	w2: w2
+    TabbedPanelItem:
+        text: 'Lab3.1'
+        GridLayout:
+            rows: 6
+            BoxLayout:
+                size_hint: 1, 0.5
+                padding: [20, 0, 0, 0]
+                ItemLabel:
+                    text: 'Input the number:'
+
+            AnchorLayout:
+                size_hint: 1, 0.5
+                TextInput:
+                    id: text_input
+                    font_size: '25sp'
+                    multiline: False
+                    input_type: 'number'
+                    input_filter: 'int'
+
+            BoxLayout:
+                size_hint: 0.9, 0.8
+                padding: [30, 20, 30, 0]
+                Button:
+                    text: 'factorize'
+                    font_size: '25sp'
+
+                    on_release:
+                        root.calculate1()
+
+            BoxLayout:
+                Label:
+                    id: factorization_state
+                    text: 'operation state'
+                    font_size: '20sp'
+
+            BoxLayout:
+                padding: [10, 0, 0, 0]
+                ItemLabel:
+                    text: 'The first multiplier: '
+                Label:
+                    id: first_number
+                    font_size: '20sp'
+                    text: ''
+                    size_hint: 0.5, 1
+
+            BoxLayout:
+                padding: [10, 0, 0, 0]
+                ItemLabel:
+                    text: 'The second multiplier: '
+                Label:
+                    id: second_number
+                    font_size: '20sp'
+                    text: ''
+                    size_hint: 0.5, 1
+
+    TabbedPanelItem:
+        text: 'Lab3.2'
+        GridLayout:
+            rows: 7
+            BoxLayout:
+		        padding: [20, 0, 0, 0]
+		        ItemLabel:
+		    	    text: 'Enter parameters:'
+
+            BoxLayout:
+                padding: [10, 0, 0, 0]
+                ItemLabel:
+                    text: "Learning rate"
+                TextInput:
+                    id: learning_rate
+                    font_size: '25sp'
+                    multiline: False
+                    input_type: 'number'
+                    input_filter: 'float'
+
+            BoxLayout:
+                padding: [10, 0, 0, 0]
+                ItemLabel:
+                    text: "Deadline(sec)"
+                TextInput:
+                    id: deadline
+                    font_size: '25sp'
+                    multiline: False
+                    input_type: 'number'
+                    input_filter: 'int'
+
+            BoxLayout:
+                padding: [10, 0, 0, 0]
+                ItemLabel:
+                    text: "Iterations number"
+                TextInput:
+                    id: iterations_number
+                    font_size: '25sp'
+                    multiline: False
+                    input_type: 'number'
+                    input_filter: 'int'
+
+            BoxLayout:
+                size_hint: 0.9, 1
+                padding: [30, 20, 30, 0]
+                Button:
+                    text: 'Training'
+                    font_size: '25sp'
+
+                    on_release:
+                        root.calculate2()
+
+            BoxLayout:
+                padding: [10, 0, 0, 0]
+                ItemLabel:
+                    text: 'w1: '
+                Label:
+                    id: w1
+                    font_size: '20sp'
+                    text: ''
+                    size_hint: 0.5, 1
+
+            BoxLayout:
+                padding: [10, 0, 0, 0]
+                ItemLabel:
+                    text: 'w2: '
+                Label:
+                    id: w2
+                    font_size: '20sp'
+                    text: ''
+                    size_hint: 0.5, 1
+
+    TabbedPanelItem:
+        text: 'Lab3.3'
+        Label:
+            text: 'coming soon'
