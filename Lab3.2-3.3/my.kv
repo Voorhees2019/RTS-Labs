@@ -22,6 +22,8 @@
 	d_val: d_val
 	y_val: y_val
 	roots: roots
+	mutate_chance: mutate_chance
+
     TabbedPanelItem:
         text: 'Lab3.1'
         GridLayout:
@@ -155,7 +157,7 @@
     TabbedPanelItem:
         text: 'Lab3.3'
         GridLayout:
-            rows: 8
+            rows: 9
             BoxLayout:
                 size_hint: 1, 0.5
                 padding: [20, 0, 0, 0]
@@ -242,3 +244,12 @@
                     text: ''
                     size_hint: 0.5, 1
 
+            BoxLayout:
+                padding: [10, 0, 0, 0]
+                ItemLabel:
+                    text: 'Best mutate chance: '
+                Label:
+                    id: mutate_chance
+                    font_size: '20sp'
+                    text: ''
+                    size_hint: 0.5, 1
